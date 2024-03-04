@@ -1,0 +1,21 @@
+<?php
+
+$AVP1 = floatval(readline("Digite a nota da AVP1: "));
+$AVP2 = floatval(readline("Digite a nota da AVP2: "));
+$TDE1 = floatval(readline("Digite a nota do TDE1: "));
+$TDE2 = floatval(readline("Digite a nota do TDE2: "));
+$TDE3 = floatval(readline("Digite a nota do TDE3: "));
+$TDE4 = floatval(readline("Digite a nota do TDE4: "));
+
+$media = (0.4 * $AVP1) + (0.4 * $AVP2) + (0.05 * ($TDE1 + $TDE2 + $TDE3 + $TDE4));
+
+echo "Sua média final é: " . number_format($media, 2) . PHP_EOL;
+
+if ($media >= 7) {
+    echo "Situação: Aprovado" . PHP_EOL;
+} elseif ($media >= 4) {
+    echo "Situação: AVF" . PHP_EOL;
+} else {
+    echo "Situação: Reprovado" . PHP_EOL;
+}
+?>
